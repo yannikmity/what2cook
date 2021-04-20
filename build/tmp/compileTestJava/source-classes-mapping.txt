@@ -1,0 +1,2 @@
+com/webtech/what2cook/What2cookApplicationTests.java
+ com.webtech.what2cook.What2cookApplicationTests
