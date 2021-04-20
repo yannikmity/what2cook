@@ -16,8 +16,6 @@ public class HelloWorldController {
         return "Hello World!";
     }
 
-<<<<<<< HEAD
-=======
     @RequestMapping("/goeki")
     public String helloGoeki(){
         return "Hello Göki!";
@@ -27,6 +25,6 @@ public class HelloWorldController {
     public String helloYannik(){
         return "Hello Yannik!";
     }
->>>>>>> 5c33be21c9e3d04cb3e266de1ef48e76f9214a5a
+
 
 }
