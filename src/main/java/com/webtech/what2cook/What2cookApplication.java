@@ -8,6 +8,9 @@ public class What2cookApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(What2cookApplication.class, args);
+
     }
+
+
 
 }
