@@ -10,4 +10,9 @@ class What2cookApplicationTests {
     void contextLoads() {
     }
 
+//    @Test
+//    void redTest(){
+//        throw runtimeException();
+//    }
+
 }
