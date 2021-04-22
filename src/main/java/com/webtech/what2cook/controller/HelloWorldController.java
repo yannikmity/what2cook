@@ -1,10 +1,20 @@
 package com.webtech.what2cook.controller;
 
+import com.webtech.what2cook.test.TestService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloWorldController {
+
+    @Autowired
+    TestService service;
+
+    @RequestMapping("/answer")
+    public String index(){
+        return "The answer is "+service.computeSomething()+"";
+    }
 
     @RequestMapping
     public String landingPage(){
@@ -13,8 +23,8 @@ public class HelloWorldController {
 
     @RequestMapping("/hello")
     public String helloWorld(){
-        return "Hello World!";
-    }
+       return "hello world"
+;    }
 
     @RequestMapping("/goeki")
     public String helloGoeki(){
@@ -25,6 +35,8 @@ public class HelloWorldController {
     public String helloYannik(){
         return "Hello Yannik!";
     }
+
+
 
 
 }

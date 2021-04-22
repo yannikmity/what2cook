@@ -1,4 +1,6 @@
 com/webtech/what2cook/What2cookApplication.java
  com.webtech.what2cook.What2cookApplication
+com/webtech/what2cook/test/TestService.java
+ com.webtech.what2cook.test.TestService
 com/webtech/what2cook/controller/HelloWorldController.java
  com.webtech.what2cook.controller.HelloWorldController
