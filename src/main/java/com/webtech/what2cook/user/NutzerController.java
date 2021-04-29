@@ -19,12 +19,12 @@ public class NutzerController {
     }
 
     @GetMapping
-    public List<Nutzer> getUser(){
+    public List<Nutzer> getUser() {
         return nutzerService.getUser();
     }
 
     @PostMapping
-    public void registerNewNutzer(@RequestBody Nutzer nutzer){
+    public void registerNewNutzer(@RequestBody Nutzer nutzer) {
         nutzerService.addNewNutzer(nutzer);
     }
 
@@ -33,13 +33,10 @@ public class NutzerController {
     public void deleteNutzer(@RequestBody Nutzer nutzer) {
         nutzerService.deleteNutzer(nutzer);
     }
-    @Autowired
-    Environment environment;
-    @GetMapping("/print")
-    public String printJDBCCreds(){
-        return environment.getProperty("JDBC_DATABASE_URL");
 
-    }
-
-
+//    @Autowired
+//    Environment environment;
+//    @GetMapping("/print")
+//    public String printJDBCCreds(){
+//        return environment.getProperty("JDBC_DATABASE_URL");
 }
