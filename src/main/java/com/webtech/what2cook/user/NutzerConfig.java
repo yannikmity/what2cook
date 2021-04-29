@@ -14,9 +14,9 @@ public class NutzerConfig {
     @Bean
     CommandLineRunner commandLineRunner(NutzerRepository nutzerRepository) {
         return args -> {
-            Nutzer yannik = new Nutzer("Yannik", "Gassmann", "yannik.gassmann@gmail.com", LocalDate.of(1995, Month.APRIL, 30));
+            Nutzer yannik = new Nutzer("Yannik", "Gassmann", "yannik.gassmann@gmail.com");
 
-            Nutzer yannik2 = new Nutzer("Jan", "Stoltenberg", "jan.stoltenberg.com", LocalDate.of(1995, Month.MAY, 03));
+            Nutzer yannik2 = new Nutzer("Jan", "S###", "jan.###.com");
 
             nutzerRepository.saveAll(List.of(yannik, yannik2));
         };

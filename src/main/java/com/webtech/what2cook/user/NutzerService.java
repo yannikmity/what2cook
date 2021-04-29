@@ -27,6 +27,9 @@ public class NutzerService {
         }
 
         nutzerRepository.save(nutzer);
+    }
+
+    public void deleteNutzer(Nutzer nutzer){
 
     }
 }

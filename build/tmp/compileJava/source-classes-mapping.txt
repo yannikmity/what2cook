@@ -1,24 +1,18 @@
+com/webtech/what2cook/user/NutzerService.java
+ com.webtech.what2cook.user.NutzerService
 com/webtech/what2cook/user/Nutzer.java
  com.webtech.what2cook.user.Nutzer
-com/webtech/what2cook/rezept/Rezept.java
- com.webtech.what2cook.rezept.Rezept
-com/webtech/what2cook/utils/JdbcUtils.java
- com.webtech.what2cook.utils.JdbcUtils
-com/webtech/what2cook/utils/DateUtils.java
- com.webtech.what2cook.utils.DateUtils
 com/webtech/what2cook/rezept/RezeptController.java
  com.webtech.what2cook.rezept.RezeptController
-com/webtech/what2cook/utils/DbCred.java
- com.webtech.what2cook.utils.DbCred
-com/webtech/what2cook/What2cookApplication.java
- com.webtech.what2cook.What2cookApplication
+com/webtech/what2cook/user/NutzerRepository.java
+ com.webtech.what2cook.user.NutzerRepository
 com/webtech/what2cook/rezept/RezeptServeice.java
  com.webtech.what2cook.rezept.RezeptServeice
 com/webtech/what2cook/user/NutzerConfig.java
  com.webtech.what2cook.user.NutzerConfig
-com/webtech/what2cook/user/NutzerRepository.java
- com.webtech.what2cook.user.NutzerRepository
-com/webtech/what2cook/user/NutzerService.java
- com.webtech.what2cook.user.NutzerService
+com/webtech/what2cook/What2cookApplication.java
+ com.webtech.what2cook.What2cookApplication
+com/webtech/what2cook/rezept/Rezept.java
+ com.webtech.what2cook.rezept.Rezept
 com/webtech/what2cook/user/NutzerController.java
  com.webtech.what2cook.user.NutzerController

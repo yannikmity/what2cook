@@ -21,9 +21,7 @@ public class Nutzer {
     private String firstName;
     private String lastName;
     private String email;
-    private LocalDate dob;
-    @Transient
-    private Integer age;
+
 
     public Nutzer(){
 
@@ -48,7 +46,6 @@ public class Nutzer {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.dob = dob;
 
     }
 
@@ -83,9 +80,5 @@ public class Nutzer {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public int getAge(){
-        return Period.between(this.dob, LocalDate.now()).getYears();
     }
 }

@@ -1,6 +1,8 @@
 package com.webtech.what2cook.user;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,5 +27,19 @@ public class NutzerController {
     public void registerNewNutzer(@RequestBody Nutzer nutzer){
         nutzerService.addNewNutzer(nutzer);
     }
+
+
+    @DeleteMapping
+    public void deleteNutzer(@RequestBody Nutzer nutzer) {
+        nutzerService.deleteNutzer(nutzer);
+    }
+    @Autowired
+    Environment environment;
+    @GetMapping("/print")
+    public String printJDBCCreds(){
+        return environment.getProperty("JDBC_DATABASE_URL");
+
+    }
+
 
 }
