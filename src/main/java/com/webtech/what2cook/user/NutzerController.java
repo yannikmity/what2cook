@@ -34,9 +34,9 @@ public class NutzerController {
         nutzerService.deleteNutzer(nutzer);
     }
 
-//    @Autowired
-//    Environment environment;
-//    @GetMapping("/print")
-//    public String printJDBCCreds(){
-//        return environment.getProperty("JDBC_DATABASE_URL");
+    @Autowired
+    Environment environment;
+    @GetMapping("/print")
+    public String printJDBCCreds(){
+        return environment.getProperty("JDBC_DATABASE_URL");
 }
