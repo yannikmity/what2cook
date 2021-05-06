@@ -37,6 +37,7 @@ public class NutzerController {
     @Autowired
     Environment environment;
     @GetMapping("/print")
-    public String printJDBCCreds(){
+    public String printJDBCCreds() {
         return environment.getProperty("JDBC_DATABASE_URL");
+    }
 }
