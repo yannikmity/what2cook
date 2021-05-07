@@ -23,21 +23,20 @@ public class NutzerController {
         return nutzerService.getUser();
     }
 
-    @PostMapping
+    @PostMapping("post")
     public void registerNewNutzer(@RequestBody Nutzer nutzer) {
         nutzerService.addNewNutzer(nutzer);
     }
 
-
-    @DeleteMapping
-    public void deleteNutzer(@RequestBody Nutzer nutzer) {
-        nutzerService.deleteNutzer(nutzer);
+    @DeleteMapping("{nutzerId}")
+    public void deleteNutzer(@PathVariable("nutzerId") Long nutzerId) {
+        nutzerService.deleteNutzer(nutzerId);
     }
 
-    @Autowired
-    Environment environment;
-    @GetMapping("/print")
-    public String printJDBCCreds() {
-        return environment.getProperty("JDBC_DATABASE_URL");
-    }
+//    @Autowired
+//    Environment environment;
+//    @GetMapping("/print")
+//    public String printJDBCCreds() {
+//        return environment.getProperty("JDBC_DATABASE_URL");
+//    }
 }

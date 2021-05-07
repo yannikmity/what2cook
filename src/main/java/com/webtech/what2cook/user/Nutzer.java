@@ -4,8 +4,15 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.Period;
 
-@Entity
-@Table
+import static javax.persistence.GenerationType.SEQUENCE;
+
+@Entity(name = "Nutzer")
+@Table(
+        name = "nutzer",
+        uniqueConstraints = {
+                @UniqueConstraint(name = "nutzer_email_unique", columnNames = "email")
+        }
+)
 public class Nutzer {
     @Id
     @SequenceGenerator(
@@ -14,17 +21,36 @@ public class Nutzer {
         allocationSize = 1
     )
     @GeneratedValue(
-            strategy =  GenerationType.SEQUENCE,
+            strategy =  SEQUENCE,
             generator = "nutzer_sequence"
     )
+    @Column(
+            name = "id",
+            updatable = false
+    )
     private Long id;
+    @Column(
+            name ="first_name",
+            nullable = false,
+            columnDefinition = "TEXT"
+    )
     private String firstName;
+    @Column(
+            name ="last_name",
+            nullable = true,
+            columnDefinition = "TEXT"
+    )
     private String lastName;
+    @Column(
+            name ="email",
+            nullable = false,
+            columnDefinition = "TEXT"
+
+    )
     private String email;
 
 
     public Nutzer(){
-
     }
 
     public Nutzer(Long id, String firstName, String lastName, String email){
@@ -36,13 +62,6 @@ public class Nutzer {
     }
 
     public Nutzer(String firstName, String lastName, String email){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-
-    }
-
-    public Nutzer(String firstName, String lastName, String email, LocalDate dob){
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

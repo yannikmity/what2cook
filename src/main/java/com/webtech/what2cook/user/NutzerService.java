@@ -21,6 +21,8 @@ public class NutzerService {
     }
 
     public void addNewNutzer(Nutzer nutzer) {
+
+        System.out.println(nutzer);
         Optional<Nutzer> nutzerByEmail = nutzerRepository.findNutzerByEmail(nutzer.getEmail());
         if (nutzerByEmail.isPresent()){
             throw new IllegalStateException("email taken");
@@ -29,7 +31,12 @@ public class NutzerService {
         nutzerRepository.save(nutzer);
     }
 
-    public void deleteNutzer(Nutzer nutzer){
+    public void deleteNutzer(Long nutzerId){
+        boolean exists = nutzerRepository.existsById(nutzerId);
+        if(!exists){
+            throw new IllegalStateException("nutzer mit id"+"existiert nicht");
+        }
+        nutzerRepository.deleteById(nutzerId);
 
     }
 }
