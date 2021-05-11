@@ -1,18 +1,61 @@
-package com.webtech.what2cook.rezept;
+package com.webtech.what2cook.persistence;
 
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
+@Entity(name = "Rezept")
+@Table(name = "rezept"
+
+)
 public class Rezept {
 
+    @Column( name = "id",
+            updatable = false
+    )
     private Long id;
+
+    @Column ( name = "strMeal",
+            nullable = false,
+            columnDefinition = "TEXT"
+    )
     private String strMeal;
+
+    @Column ( name = "drinkAlternate",
+            nullable = false,
+            columnDefinition = "TEXT"
+    )
     private String drinkAlternate;
+
+    @Column ( name = "category",
+            nullable = true,
+            columnDefinition = "TEXT"
+    )
     private String category;
+
+    @Column ( name = "area",
+            nullable = false,
+            columnDefinition = "TEXT"
+    )
     private String area;
+
+    @Column ( name = "instruction",
+            nullable = false,
+            columnDefinition = "TEXT"
+    )
     private String instruction;
+
     private String mealThumb; //Bild
+
     private String tags;
     private String youTubeLink;
+
+    @Column ( name = "ingre1",
+            nullable = false,
+            columnDefinition = "TEXT"
+    )
     private String ingre1;
     private String ingre2;
     private String ingre3;
@@ -57,6 +100,11 @@ public class Rezept {
     private String imageSource;
     private String creativeCommonsConfirmed;
     private LocalDate dateModified;
+
+
+    public Rezept() {
+
+    }
 
 
 

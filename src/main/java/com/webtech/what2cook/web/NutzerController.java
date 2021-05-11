@@ -1,14 +1,15 @@
-package com.webtech.what2cook.user;
+package com.webtech.what2cook.web;
 
 
+import com.webtech.what2cook.persistence.Nutzer;
+import com.webtech.what2cook.service.NutzerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/api/v1/nutzer")
+@RequestMapping(path = "nutzer")
 public class NutzerController {
 
     private final NutzerService nutzerService;

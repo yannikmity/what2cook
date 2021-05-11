@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <!--Responsive metatag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>what2cook</title>
+</head>
+<body>
+    <div id="app">
+        <img v-bind:src="strMealThumb">
+        <h1>Gericht: {{strMeal}}</h1>
+        <h3>Kategorie: {{strCategory}}</h3>
+        <h3>Küche: {{strArea}}</h3>
+
+        <ul>
+            <h5>Zutaten & Menge</h5>
+            <li>{{strIngredient1}},  {{strMeasure1}}</li>
+            <li>{{strIngredient2}},  {{strMeasure2}}</li>
+            <li>{{strIngredient3}},  {{strMeasure3}}</li>
+            <li>{{strIngredient4}},  {{strMeasure4}}</li>
+            <li>{{strIngredient5}},  {{strMeasure5}}</li>
+            <li>{{strIngredient6}},  {{strMeasure6}}</li>
+            <li>{{strIngredient7}},  {{strMeasure7}}</li>
+            <li>{{strIngredient8}},  {{strMeasure8}}</li>
+            <li>{{strIngredient9}},  {{strMeasure9}}</li>
+            <li>{{strIngredient10}},  {{strMeasure10}}</li>
+            <li>{{strIngredient11}},  {{strMeasure11}}</li>
+            <li>{{strIngredient12}},  {{strMeasure12}}</li>
+            <li>{{strIngredient13}},  {{strMeasure13}}</li>
+            <li>{{strIngredient14}},  {{strMeasure14}}</li>
+            <li>{{strIngredient15}},  {{strMeasure15}}</li>
+            <li>{{strIngredient16}},  {{strMeasure16}}</li>
+            <li>{{strIngredient17}},  {{strMeasure17}}</li>
+            <li>{{strIngredient18}},  {{strMeasure18}}</li>
+            <li>{{strIngredient19}},  {{strMeasure19}}</li>
+            <li>{{strIngredient20}},  {{strMeasure20}}</li>
+        </ul>
+
+
+    <button v-on:click="getRezept()"> Random Rezept </button>
+
+    </div>
+    <script src="https://unpkg.com/vue@3.0.5"></script>
+    <script src="app.js"></script>
+</body>
+</html>

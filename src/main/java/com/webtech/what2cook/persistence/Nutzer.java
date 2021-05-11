@@ -1,4 +1,4 @@
-package com.webtech.what2cook.user;
+package com.webtech.what2cook.persistence;
 
 import javax.persistence.*;
 import java.time.LocalDate;

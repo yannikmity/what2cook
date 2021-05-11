@@ -1,11 +1,11 @@
-package com.webtech.what2cook.user;
+package com.webtech.what2cook.persistence;
 
+import com.webtech.what2cook.persistence.Nutzer;
+import com.webtech.what2cook.persistence.NutzerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
 
 @Configuration

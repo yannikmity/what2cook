@@ -1,5 +1,7 @@
-package com.webtech.what2cook.user;
+package com.webtech.what2cook.service;
 
+import com.webtech.what2cook.persistence.Nutzer;
+import com.webtech.what2cook.persistence.NutzerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +24,6 @@ public class NutzerService {
 
     public void addNewNutzer(Nutzer nutzer) {
 
-        System.out.println(nutzer);
         Optional<Nutzer> nutzerByEmail = nutzerRepository.findNutzerByEmail(nutzer.getEmail());
         if (nutzerByEmail.isPresent()){
             throw new IllegalStateException("email taken");
