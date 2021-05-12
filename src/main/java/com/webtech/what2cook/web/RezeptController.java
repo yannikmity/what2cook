@@ -4,6 +4,7 @@ import com.webtech.what2cook.persistence.Nutzer;
 import com.webtech.what2cook.persistence.Rezept;
 import com.webtech.what2cook.service.RezeptService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,14 +20,16 @@ public class RezeptController {
         this.rezeptService = rezeptService;
     }
 
-    @GetMapping
-    public List<Rezept> getAllRezepte(){
-        return rezeptService.getAllRezepte();
+    @GetMapping("thymeleaf")
+    String getAllRezepte(@org.jetbrains.annotations.NotNull Model model){
+        String s = "hallo";
+
+        return "rezept123";
     }
 
-    @PostMapping("post")
-    public void registerNewNutzer(@RequestBody Rezept rezept) {
-        rezeptService.addRezept(rezept);
-    }
+//    @PostMapping("post")
+//    public void registerNewNutzer(@RequestBody Rezept rezept) {
+//        rezeptService.addRezept(rezept);
+//    }
 
 }

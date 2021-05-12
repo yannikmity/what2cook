@@ -1,16 +1,25 @@
 package com.webtech.what2cook.persistence;
 
-import javax.persistence.CollectionTable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
+
+import static javax.persistence.GenerationType.SEQUENCE;
 
 @Entity(name = "Rezept")
 @Table(name = "rezept"
 
 )
 public class Rezept {
+    @Id
+    @SequenceGenerator(
+            name = "rezept_sequence",
+            sequenceName = "rezept_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy =  SEQUENCE,
+            generator = "rezept_sequence"
+    )
 
     @Column( name = "id",
             updatable = false
@@ -104,6 +113,10 @@ public class Rezept {
 
     public Rezept() {
 
+    }
+
+    public Rezept(String strMeal){
+        this.strMeal = strMeal;
     }
 
 

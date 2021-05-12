@@ -5,10 +5,12 @@ import com.webtech.what2cook.persistence.NutzerRepository;
 import com.webtech.what2cook.persistence.Rezept;
 import com.webtech.what2cook.persistence.RezeptRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class RezeptService {
 
     private final RezeptRepository rezeptRepository;

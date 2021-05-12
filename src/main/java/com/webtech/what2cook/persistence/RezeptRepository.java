@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface RezeptRepository extends JpaRepository<Rezept, Long> {
 
-    @Query("SELECT r FROM Rezept r WHERE r.name =?1")
+    @Query("SELECT r FROM Rezept r WHERE r.strMeal =?1")
     Optional<Rezept> findRezeptByName(String strMeal);
 
 }
