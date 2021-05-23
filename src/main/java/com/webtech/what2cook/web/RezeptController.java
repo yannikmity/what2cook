@@ -21,10 +21,11 @@ public class RezeptController {
     }
 
     @GetMapping("thymeleaf")
-    String getAllRezepte(@org.jetbrains.annotations.NotNull Model model){
+    String getAllRezepte(Model model){
+        model.addAttribute("s", "hallo zamm");
         String s = "hallo";
 
-        return "rezept123";
+        return "rezept1233";
     }
 
 //    @PostMapping("post")
