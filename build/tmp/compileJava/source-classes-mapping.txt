@@ -1,13 +1,13 @@
+com/webtech/what2cook/web/MainController.java
+ com.webtech.what2cook.web.MainController
 com/webtech/what2cook/persistence/NutzerRepository.java
  com.webtech.what2cook.persistence.NutzerRepository
 com/webtech/what2cook/config/ViewNames.java
  com.webtech.what2cook.config.ViewNames
-com/webtech/what2cook/web/ThymeleafController.java
- com.webtech.what2cook.web.ThymeleafController
 com/webtech/what2cook/service/RezeptService.java
  com.webtech.what2cook.service.RezeptService
-com/webtech/what2cook/web/RegisterController.java
- com.webtech.what2cook.web.RegisterController
+com/webtech/what2cook/config/WebMvcConfig.java
+ com.webtech.what2cook.config.WebMvcConfig
 com/webtech/what2cook/web/NutzerController.java
  com.webtech.what2cook.web.NutzerController
 com/webtech/what2cook/persistence/Nutzer.java

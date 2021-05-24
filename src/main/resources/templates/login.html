@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <!--Responsive metatag-->
@@ -10,11 +10,14 @@
     <title>what2cook</title>
 </head>
 <body>
+
 <div class="wrapper fadeInDown">
+
     <div id="formContent">
+
         <!-- Tabs Titles -->
-        <h2 class="active"> Sign In </h2>
-        <h2 class="inactive underlineHover">Sign Up </h2>
+        <h2 class="active"> Login </h2>
+        <h2 class="inactive underlineHover">Registrieren </h2>
 
         <!-- Icon -->
         <div class="fadeIn first">
@@ -25,7 +28,15 @@
         <form>
             <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
             <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+
             <input type="submit" class="fadeIn fourth" value="Log In">
+            <div th:if="${param.badCredentials}" class="alert alert-danger" role="alert">
+                <span>Invalid email or password!</span>
+            </div>
+            <div th:if="${param.logout}" class="alert alert-success" role="alert">
+                <span>You have been successfully logged out.</span>
+            </div>
+
         </form>
 
         <!-- Remind Passowrd -->
