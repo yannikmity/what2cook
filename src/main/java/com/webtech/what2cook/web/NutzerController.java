@@ -36,7 +36,11 @@ public class NutzerController {
     }
     @PostMapping(Endpoints.REGISTER)
     public ModelAndView submitForm(@ModelAttribute("nutzer") Nutzer nutzer) {
-        nutzerService.addNewNutzer(nutzer);
+        try {
+            nutzerService.addNewNutzer(nutzer);
+        } catch (IllegalStateException e) {
+            return new ModelAndView(ViewNames.REGISTERROR);
+        }
         return new ModelAndView(ViewNames.REGISTERFOLGREICH);
     }
 

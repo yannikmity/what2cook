@@ -29,14 +29,10 @@ public class NutzerService {
 
         Optional<Nutzer> nutzerByEmail = nutzerRepository.findNutzerByEmail(nutzer.getEmail());
         if (nutzerByEmail.isPresent()){
-            takenMail(nutzer);
+
             throw new IllegalStateException("email taken");
         }
         nutzerRepository.save(nutzer);
-    }
-
-    public ModelAndView takenMail(Nutzer nutzer){
-        return new ModelAndView(ViewNames.REGISTERROR);
     }
 
 
