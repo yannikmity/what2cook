@@ -11,7 +11,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.ws.rs.Path;
 import java.util.List;
+
+import static com.webtech.what2cook.config.ApplicationUserRole.NUTZER;
 
 @RestController
 @Controller
@@ -34,9 +37,15 @@ public class NutzerController {
     @PostMapping(Endpoints.REGISTER)
     public ModelAndView submitForm(@ModelAttribute("nutzer") Nutzer nutzer) {
         nutzerService.addNewNutzer(nutzer);
-        System.out.println(nutzer);
         return new ModelAndView(ViewNames.REGISTERFOLGREICH);
     }
+
+    //errorhandling mit controller?
+    @GetMapping(Endpoints.REGISTERROR)
+    public ModelAndView showFormError(Nutzer nutzer){
+        return new ModelAndView(ViewNames.REGISTERROR);
+    }
+
 
     @GetMapping()
     public String getAllRezepte(){
@@ -44,19 +53,29 @@ public class NutzerController {
     }
 
 
-    @GetMapping("getUser")
+//    @RequestMapping("api/v1/students")
+    @GetMapping(path = "getUser")
     public List<Nutzer> getUser() {
         return nutzerService.getUser();
     }
+//    public Nutzer getMyProfile(@PathVariable("id") Integer id) {
+//        return NUTZER.stream()
+//                .filter(nutzer -> id.equals(nutzer.getId()))
+//                .findFirst()
+//                .orElseThro(() -> new IllegalStateException(
+//                        "Nutzer" + id + " does not exists"
+//                ))
+//    }
 
-    @PostMapping("post")
-    public void registerNewNutzer(@RequestBody Nutzer nutzer) {
-        nutzerService.addNewNutzer(nutzer);
-    }
-
-    @DeleteMapping("{nutzerId}")
-    public void deleteNutzer(@PathVariable("nutzerId") Long nutzerId) {
-        nutzerService.deleteNutzer(nutzerId);
+//
+//    @PostMapping("post")
+//    public void registerNewNutzer(@RequestBody Nutzer nutzer) {
+//        nutzerService.addNewNutzer(nutzer);
+//    }
+//
+//    @DeleteMapping("{nutzerId}")
+//    public void deleteNutzer(@PathVariable("nutzerId") Long nutzerId) {
+//        nutzerService.deleteNutzer(nutzerId);
 
     }
 
@@ -68,5 +87,3 @@ public class NutzerController {
 //    }
 
 
-
-}

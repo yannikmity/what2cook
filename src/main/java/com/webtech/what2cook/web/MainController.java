@@ -35,7 +35,7 @@ public class MainController {
     public ModelAndView showIndexPage1() {
         return new ModelAndView(ViewNames.LOGIN);
     }
-
+//
 //    @GetMapping(value = Endpoints.REGISTER, method = RequestMethod.POST)
 //    public ModelAndView showIndexPage2(@ModelAttribute("nutzer") Nutzer nutzer) {
 //        return new ModelAndView(ViewNames.REGISTER);

@@ -24,5 +24,5 @@ public class WebMvcConfig implements WebMvcConfigurer {
     LocaleResolver localResolver(){
         return new FixedLocaleResolver(Locale.GERMAN);
     }
-    
+
 }

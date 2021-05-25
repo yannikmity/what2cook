@@ -6,6 +6,7 @@ public class Endpoints {
     public static final String LOGIN ="/login";
     public static final String REGISTER ="/register";
     public static final String REGISTERFOLGREICH = "/register_success";
+    public static final String REGISTERROR = "/register_error";
     public static final String PWVERGESSEN ="/pwvergessen";
 
 }

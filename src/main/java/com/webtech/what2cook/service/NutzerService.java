@@ -1,9 +1,12 @@
 package com.webtech.what2cook.service;
 
+import com.webtech.what2cook.config.Endpoints;
+import com.webtech.what2cook.config.ViewNames;
 import com.webtech.what2cook.persistence.Nutzer;
 import com.webtech.what2cook.persistence.NutzerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 import java.util.Optional;
@@ -26,11 +29,16 @@ public class NutzerService {
 
         Optional<Nutzer> nutzerByEmail = nutzerRepository.findNutzerByEmail(nutzer.getEmail());
         if (nutzerByEmail.isPresent()){
+            takenMail(nutzer);
             throw new IllegalStateException("email taken");
         }
-
         nutzerRepository.save(nutzer);
     }
+    //funktioniert das so?
+    public ModelAndView takenMail(Nutzer nutzer){
+        return new ModelAndView(ViewNames.REGISTERROR);
+    }
+
 
     public void deleteNutzer(Long nutzerId){
         boolean exists = nutzerRepository.existsById(nutzerId);

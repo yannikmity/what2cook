@@ -13,7 +13,6 @@
   </head>
 <body>
   <main>
-
     <div class="container">
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
@@ -28,48 +27,14 @@
         </ul>
 
         <div class="col-md-3 text-end">
-          <button type="button" class="btn btn-outline-primary me-2">Login</button>
-          <button action="#" th:action="@{/register}" th:method="post" type="button" class="btn btn-primary">Sign-up</button>
+          <button th:action="@{login.html}" type="button" class="btn btn-outline-primary me-2">Login</button>
+          <button action="#" th:action="@{register.html}" th:method="post" type="button" class="btn btn-primary">Sign-up</button>
         </div>
-
-        <div id="app">
-          <img v-bind:src="strMealThumb" alt="Gericht" width="300" height="250" style="vertical-align:middle;margin:0px 50px" class="col-md-3 text-end"/>
-          <h1>Gericht: {{strMeal}}</h1>
-          <h3>Kategorie: {{strCategory}}</h3>
-          <h3>Küche: {{strArea}}</h3>
-
-          <ul>
-            <h5>Zutaten & Menge</h5>
-            <li>{{strIngredient1}},  {{strMeasure1}}</li>
-            <li>{{strIngredient2}},  {{strMeasure2}}</li>
-            <li>{{strIngredient3}},  {{strMeasure3}}</li>
-            <li>{{strIngredient4}},  {{strMeasure4}}</li>
-            <li>{{strIngredient5}},  {{strMeasure5}}</li>
-            <li>{{strIngredient6}},  {{strMeasure6}}</li>
-            <li>{{strIngredient7}},  {{strMeasure7}}</li>
-            <li>{{strIngredient8}},  {{strMeasure8}}</li>
-            <li>{{strIngredient9}},  {{strMeasure9}}</li>
-            <li>{{strIngredient10}},  {{strMeasure10}}</li>
-            <li>{{strIngredient11}},  {{strMeasure11}}</li>
-            <li>{{strIngredient12}},  {{strMeasure12}}</li>
-            <li>{{strIngredient13}},  {{strMeasure13}}</li>
-            <li>{{strIngredient14}},  {{strMeasure14}}</li>
-            <li>{{strIngredient15}},  {{strMeasure15}}</li>
-            <li>{{strIngredient16}},  {{strMeasure16}}</li>
-            <li>{{strIngredient17}},  {{strMeasure17}}</li>
-            <li>{{strIngredient18}},  {{strMeasure18}}</li>
-            <li>{{strIngredient19}},  {{strMeasure19}}</li>
-            <li>{{strIngredient20}},  {{strMeasure20}}</li>
-          </ul>
-
-
-          <button v-on:click="getRezept()"> Random Rezept </button>
-
-        </div>
-        <script src="https://unpkg.com/vue@3.0.5"></script>
-        <script src="app.js"></script>
 
       </header>
+    </div>
+    <div align="center">
+      <h1>Landingpage</h1>
     </div>
   </main>
 </body>

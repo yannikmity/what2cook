@@ -24,3 +24,42 @@
 </form>
 </body>
 </html>
+
+
+
+
+<div id="app" align="center">
+
+    <img v-bind:src="strMealThumb" alt="Gericht" width="300" height="250" style="vertical-align:middle;margin:0px 50px" class="col-md-3 text-end"/>
+    <h1>Gericht: {{strMeal}}</h1>
+    <h3>Kategorie: {{strCategory}}</h3>
+    <h3>Küche: {{strArea}}</h3
+</div>
+
+<ul th:align="center">
+    <h5>Zutaten & Menge</h5>
+    <li>{{strIngredient1}},  {{strMeasure1}}</li>
+    <li>{{strIngredient2}},  {{strMeasure2}}</li>
+    <li>{{strIngredient3}},  {{strMeasure3}}</li>
+    <li>{{strIngredient4}},  {{strMeasure4}}</li>
+    <li>{{strIngredient5}},  {{strMeasure5}}</li>
+    <li>{{strIngredient6}},  {{strMeasure6}}</li>
+    <li>{{strIngredient7}},  {{strMeasure7}}</li>
+    <li>{{strIngredient8}},  {{strMeasure8}}</li>
+    <li>{{strIngredient9}},  {{strMeasure9}}</li>
+    <li>{{strIngredient10}},  {{strMeasure10}}</li>
+    <li>{{strIngredient11}},  {{strMeasure11}}</li>
+    <li>{{strIngredient12}},  {{strMeasure12}}</li>
+    <li>{{strIngredient13}},  {{strMeasure13}}</li>
+    <li>{{strIngredient14}},  {{strMeasure14}}</li>
+    <li>{{strIngredient15}},  {{strMeasure15}}</li>
+    <li>{{strIngredient16}},  {{strMeasure16}}</li>
+    <li>{{strIngredient17}},  {{strMeasure17}}</li>
+    <li>{{strIngredient18}},  {{strMeasure18}}</li>
+    <li>{{strIngredient19}},  {{strMeasure19}}</li>
+    <li>{{strIngredient20}},  {{strMeasure20}}</li>
+</ul>
+<button v-on:click="getRezept()"> Random Rezept </button>
+<script src="https://unpkg.com/vue@3.0.5"></script>
+<script src="app.js"></script>
+</div>
