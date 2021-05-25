@@ -2,8 +2,8 @@ com/webtech/what2cook/config/PasswortConfig.java
  com.webtech.what2cook.config.PasswortConfig
 com/webtech/what2cook/web/MainController.java
  com.webtech.what2cook.web.MainController
-com/webtech/what2cook/config/ApplicationSecurityConfig.java
- com.webtech.what2cook.config.ApplicationSecurityConfig
+com/webtech/what2cook/web/NutzerController.java
+ com.webtech.what2cook.web.NutzerController
 com/webtech/what2cook/persistence/NutzerRepository.java
  com.webtech.what2cook.persistence.NutzerRepository
 com/webtech/what2cook/config/ViewNames.java
@@ -34,5 +34,5 @@ com/webtech/what2cook/config/ApplicationUserRole.java
  com.webtech.what2cook.config.ApplicationUserRole
 com/webtech/what2cook/service/NutzerService.java
  com.webtech.what2cook.service.NutzerService
-com/webtech/what2cook/web/NutzerController.java
- com.webtech.what2cook.web.NutzerController
+com/webtech/what2cook/config/ApplicationSecurityConfig.java
+ com.webtech.what2cook.config.ApplicationSecurityConfig
