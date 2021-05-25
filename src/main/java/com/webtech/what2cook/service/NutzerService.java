@@ -34,7 +34,7 @@ public class NutzerService {
         }
         nutzerRepository.save(nutzer);
     }
-    //funktioniert das so?
+
     public ModelAndView takenMail(Nutzer nutzer){
         return new ModelAndView(ViewNames.REGISTERROR);
     }

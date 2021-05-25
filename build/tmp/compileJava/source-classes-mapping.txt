@@ -30,9 +30,9 @@ com/webtech/what2cook/config/ApplicationUserPermission.java
  com.webtech.what2cook.config.ApplicationUserPermission
 com/webtech/what2cook/persistence/NutzerConfig.java
  com.webtech.what2cook.persistence.NutzerConfig
-com/webtech/what2cook/service/NutzerService.java
- com.webtech.what2cook.service.NutzerService
 com/webtech/what2cook/config/ApplicationUserRole.java
  com.webtech.what2cook.config.ApplicationUserRole
+com/webtech/what2cook/service/NutzerService.java
+ com.webtech.what2cook.service.NutzerService
 com/webtech/what2cook/web/NutzerController.java
  com.webtech.what2cook.web.NutzerController
