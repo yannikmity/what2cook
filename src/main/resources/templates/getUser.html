@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> Title </th>
+        <th> Author </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${nutzer.empty}">
+        <td colspan="2"> No Books Available </td>
+    </tr>
+    <tr th:each="nutzer: ${nutzer}">
+        <td><span th:text="${nutzer}"> Title </span></td>
+        <td><span th:text="${nutzer}"> Author </span></td>
+
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

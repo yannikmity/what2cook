@@ -10,15 +10,12 @@ import java.util.List;
 
 @Configuration
 public class NutzerConfig {
-
     @Bean
     CommandLineRunner commandLineRunner(NutzerRepository nutzerRepository) {
         return args -> {
-            Nutzer yannik = new Nutzer("Yannik", "Gassmann", "yannik.gassmann@gmail.com");
-
-            Nutzer yannik2 = new Nutzer("Jan", "S###", "jan.###.com");
-
-            nutzerRepository.saveAll(List.of(yannik, yannik2));
+            Nutzer nutzer1 = new Nutzer("nutzer1", "nachname1", "nummer1@test.com");
+            Nutzer nutzer2 = new Nutzer("nutzer2", "nachname2", "nummer2@test.com");
+            nutzerRepository.saveAll(List.of(nutzer1, nutzer2));
         };
     }
 }

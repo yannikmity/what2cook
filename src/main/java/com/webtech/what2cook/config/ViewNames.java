@@ -8,6 +8,5 @@ public class ViewNames {
     public static final String REGISTERFOLGREICH = "register_success";
     public static final String REGISTERROR = "register_error";
     public static final String PWVERGESSEN = "pwvergessen";
-
-
+    public static final String MEINEREZEPTE = "/meinerezepte";
 }

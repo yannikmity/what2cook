@@ -1,6 +1,5 @@
 package com.webtech.what2cook.web;
 
-
 import com.webtech.what2cook.config.Endpoints;
 import com.webtech.what2cook.config.ViewNames;
 import com.webtech.what2cook.persistence.Nutzer;
@@ -10,10 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
 import javax.ws.rs.Path;
 import java.util.List;
-
 import static com.webtech.what2cook.config.ApplicationUserRole.NUTZER;
 
 @RestController
@@ -44,21 +41,20 @@ public class NutzerController {
         return new ModelAndView(ViewNames.REGISTERFOLGREICH);
     }
 
-    //errorhandling mit controller?
     @GetMapping(Endpoints.REGISTERROR)
     public ModelAndView showFormError(Nutzer nutzer){
         return new ModelAndView(ViewNames.REGISTERROR);
     }
 
 
-    @GetMapping()
-    public String getAllRezepte(){
-        return "login";
+    @GetMapping(Endpoints.MEINEREZEPTE)
+    public ModelAndView getAllRezepte(){
+        return new ModelAndView(ViewNames.MEINEREZEPTE);
     }
 
 
-//    @RequestMapping("api/v1/students")
-    @GetMapping(path = "getUser")
+    //@RequestMapping("api/v1/students")
+    @GetMapping(path = "/api/getUser")
     public List<Nutzer> getUser() {
         return nutzerService.getUser();
     }
@@ -71,12 +67,6 @@ public class NutzerController {
 //                ))
 //    }
 
-//
-//    @PostMapping("post")
-//    public void registerNewNutzer(@RequestBody Nutzer nutzer) {
-//        nutzerService.addNewNutzer(nutzer);
-//    }
-//
 //    @DeleteMapping("{nutzerId}")
 //    public void deleteNutzer(@PathVariable("nutzerId") Long nutzerId) {
 //        nutzerService.deleteNutzer(nutzerId);

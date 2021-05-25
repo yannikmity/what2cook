@@ -9,4 +9,6 @@ public class Endpoints {
     public static final String REGISTERROR = "/register_error";
     public static final String PWVERGESSEN ="/pwvergessen";
 
+    public static final String MEINEREZEPTE = "/meinerezepte";
+    public static String CREATEREZEPT = "createRezept";
 }
