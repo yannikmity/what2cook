@@ -6,9 +6,7 @@ import java.time.LocalDate;
 import static javax.persistence.GenerationType.SEQUENCE;
 
 @Entity(name = "Rezept")
-@Table(name = "rezept"
-
-)
+@Table(name = "rezept")
 public class Rezept {
     @Id
     @SequenceGenerator(
