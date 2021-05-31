@@ -1,14 +1,28 @@
 package com.webtech.what2cook.persistence;
 
 import javax.persistence.*;
+import java.io.*;
+import java.net.URLConnection;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import static javax.persistence.GenerationType.SEQUENCE;
 
-@Entity(name = "Rezept")
-@Table(name = "rezept"
+import java.net.URL;
+import java.nio.charset.Charset;
 
-)
+import org.apache.tomcat.util.json.JSONParser;
+import org.apache.tomcat.util.json.ParseException;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+
+
+@Entity(name = "Rezept")
+@Table(name = "rezept")
+
 public class Rezept {
     @Id
     @SequenceGenerator(
@@ -109,6 +123,76 @@ public class Rezept {
     private String imageSource;
     private String creativeCommonsConfirmed;
     private LocalDate dateModified;
+
+
+//ArrayListen erstellen anstatt feste Anzahl an Zutaten, zwecks flexibilität
+    //@ElementCollection ???
+   // private ArrayList<String> ingredients;
+    //@ElementCollection  ???
+    //private ArrayList<String> measure;
+
+//   public List<String> ingredients = new ArrayList<String>();
+//    List<String> measure = new ArrayList<String>();
+
+
+//    public Rezept(String strMeal, ArrayList<String> ingredients, ArrayList<String> measure){
+//        this.strMeal = strMeal;
+//        this.ingredients = ingredients;
+//        this.measure = measure;
+//
+//        for (String ingr : ingredients){
+//            ingredients.add(ingr);
+//        }
+//
+//        for (String mea : measure){
+//            measure.add(mea);
+//        }
+//    }
+
+
+    //public void Jdata(){
+    public static void main(String[] args){
+        String inputLine = "";
+        JSONParser parser = new JSONParser(inputLine);
+
+        try {
+            URL oracle = new URL("https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata"); // URL to Parse
+            URLConnection yc = oracle.openConnection();
+            BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
+
+
+            while ((inputLine = in.readLine()) != null) {
+                JSONArray a = (JSONArray) parser.parse();
+
+
+
+                // Loop through each item
+                for (int i = 0; i < a.length();i++) {
+                    JSONObject tutorials = (JSONObject) a.get(i);
+
+                    String id = (String) tutorials.get("meals");
+
+                    System.out.println("strMal ID : " + id);
+
+                    System.out.println("\n");
+                }
+            }
+            in.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+}
+// bis hier
+
+
+
 
 
     public Rezept() {
