@@ -4,8 +4,12 @@ import com.webtech.what2cook.persistence.Nutzer;
 import com.webtech.what2cook.persistence.NutzerRepository;
 import com.webtech.what2cook.persistence.Rezept;
 import com.webtech.what2cook.persistence.RezeptRepository;
+//import com.webtech.what2cook.web.Meal;
+//import com.webtech.what2cook.web.MealResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Optional;
@@ -33,5 +37,11 @@ public class RezeptService {
         }
     }
 
+
     //RequestBody für Rezept
+
+
+
+
+
 }

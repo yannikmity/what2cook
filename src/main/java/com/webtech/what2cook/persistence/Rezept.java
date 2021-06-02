@@ -154,45 +154,45 @@ public class Rezept {
 
 
     //public void Jdata(){
-    public static void main(String[] args){
-        String inputLine = "";
-        JSONParser parser = new JSONParser(inputLine);
-
-        try {
-            URL oracle = new URL("https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata"); // URL to Parse
-            URLConnection yc = oracle.openConnection();
-            BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
-
-
-            while ((inputLine = in.readLine()) != null) {
-                JSONArray a = (JSONArray) parser.parse();
-
-
-
-                // Loop through each item
-                for (int i = 0; i < a.length();i++) {
-                    JSONObject tutorials = (JSONObject) a.get(i);
-
-                    String id = (String) tutorials.get("meals");
-
-                    System.out.println("strMal ID : " + id);
-
-                    System.out.println("\n");
-                }
-            }
-            in.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-}
-// bis hier
+//    public static void main(String[] args){
+//        String inputLine = "";
+//        JSONParser parser = new JSONParser(inputLine);
+//
+//        try {
+//            URL oracle = new URL("https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata"); // URL to Parse
+//            URLConnection yc = oracle.openConnection();
+//            BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
+//
+//
+//            while ((inputLine = in.readLine()) != null) {
+//                JSONArray a = (JSONArray) parser.parse();
+//
+//
+//
+//                // Loop through each item
+//                for (int i = 0; i < a.length();i++) {
+//                    JSONObject tutorials = (JSONObject) a.get(i);
+//
+//                    String id = (String) tutorials.get("meals");
+//
+//                    System.out.println("strMal ID : " + id);
+//
+//                    System.out.println("\n");
+//                }
+//            }
+//            in.close();
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//
+//}
+//// bis hier
 
 
 
