@@ -22,10 +22,6 @@ import org.json.JSONObject;
 
 @Entity(name = "Rezept")
 @Table(name = "rezept")
-<<<<<<< HEAD
-
-=======
->>>>>>> a1339df5bc071de56a59bc1617ed468384ea2bb6
 public class Rezept {
     @Id
     @SequenceGenerator(
