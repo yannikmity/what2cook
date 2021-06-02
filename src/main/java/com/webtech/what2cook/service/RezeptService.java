@@ -14,12 +14,12 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+//@Service
 public class RezeptService {
 
     private final RezeptRepository rezeptRepository;
 
-    @Autowired
+    //@Autowired
     public RezeptService(RezeptRepository rezeptRepository) {
         this.rezeptRepository = rezeptRepository;
     }

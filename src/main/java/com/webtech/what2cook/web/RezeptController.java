@@ -4,7 +4,7 @@ import com.webtech.what2cook.config.Endpoints;
 import com.webtech.what2cook.persistence.Nutzer;
 //import com.webtech.what2cook.persistence.Rezept;
 import com.webtech.what2cook.persistence.Rezept;
-import com.webtech.what2cook.service.RezeptService;
+import com.webtech.what2cook.web.RezeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
