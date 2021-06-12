@@ -1,0 +1,7 @@
+{
+  "name": "what2cook",
+  "version": "1.0.0",
+  "devDependencies": {
+    "vue-cli-plugin-mdb": "~2.1.0"
+  }
+}
