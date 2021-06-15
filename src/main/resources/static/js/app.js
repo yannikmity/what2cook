@@ -51,7 +51,7 @@ const app = Vue.createApp({
     },
     methods: {
         async getRezept() {
-            const res = await fetch('https://www.themealdb.com/api/json/v1/1/random.php/52840')
+            const res = await fetch('https://www.themealdb.com/api/json/v1/1/random.php')
             const { meals }  = await res.json()
 
             console.log(meals)

@@ -13,7 +13,7 @@ import javax.ws.rs.Path;
 import java.util.List;
 import static com.webtech.what2cook.config.ApplicationUserRole.NUTZER;
 
-@RestController
+//@RestController
 @Controller
 //@RequestMapping(path = "nutzer")
 public class NutzerController {
