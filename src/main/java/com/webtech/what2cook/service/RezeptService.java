@@ -1,5 +1,6 @@
 package com.webtech.what2cook.service;
 
+import com.webtech.what2cook.persistence.Meal;
 import com.webtech.what2cook.persistence.MealResponse;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;
@@ -17,12 +18,12 @@ public class RezeptService {
     public RezeptService(RestTemplateBuilder restTemplateBuilder) {
         this.restTemplate = restTemplateBuilder.build();
     }
-    public String getJSON() {
-        String url = "https://www.themealdb.com/api/json/v1/1/random.php";
-        return this.restTemplate.getForObject(url, String.class);
-    }
+//    public String getJSON() {
+//        String url = "https://www.themealdb.com/api/json/v1/1/random.php";
+//        return this.restTemplate.getForObject(url, String.class);
+//    }
 
-    public void fetch(){
+    public ResponseEntity<MealResponse> fetch(){
         ResponseEntity<MealResponse> entity = restTemplate.getForEntity(API_URL, MealResponse.class);
 
         MealResponse mealResponse = entity.getBody();
@@ -38,5 +39,8 @@ public class RezeptService {
         System.out.println(mealResponse.getMeals().get(0).getStrYoutube());
         System.out.println(mealResponse.getMeals().get(0).getStrIngredient1());
         System.out.println(mealResponse.getMeals().get(0).getStrIngredient2());
+
+        return entity;
+
     }
 }

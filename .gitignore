@@ -31,4 +31,5 @@ build
 gradle
 .gradle/buildOutputCleanup/outputFiles.bin
 .gradle/buildOutputCleanup/buildOutputCleanup.lock
+application.properties
 

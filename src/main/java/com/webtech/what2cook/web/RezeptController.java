@@ -2,6 +2,7 @@ package com.webtech.what2cook.web;
 
 import com.webtech.what2cook.config.Endpoints;
 import com.webtech.what2cook.config.ViewNames;
+import com.webtech.what2cook.persistence.MealResponse;
 import com.webtech.what2cook.persistence.Rezept;
 import com.webtech.what2cook.service.RezeptService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,9 +32,10 @@ public class RezeptController {
     }
 
     @GetMapping("/api/rezept")
-    public ResponseEntity<Void> test() {
-        rezeptService.fetch();
-        return ResponseEntity.ok().build();
+    public ResponseEntity<MealResponse> test() {
+        return rezeptService.fetch();
+        //rezeptService.fetch();
+        //return ResponseEntity.ok().build();
     }
 
     @GetMapping(Endpoints.MEINEREZEPTE)
