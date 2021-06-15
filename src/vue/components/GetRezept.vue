@@ -10,7 +10,7 @@ export default {
     }
   },
   mounted() {
-    fetch("https://www.themealdb.com/api/json/v1/1/random.php/52840")
+    fetch("https://www.themealdb.com/api/json/v1/1/random.php")
     const createMeal = meal => {
         const ingreAndMeasure = [];
         for (let i = 1; i <= 20; i++) {

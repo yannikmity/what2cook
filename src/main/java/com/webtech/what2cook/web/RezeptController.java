@@ -35,6 +35,7 @@ public class RezeptController {
         return new ModelAndView(Endpoints.CREATEREZEPT);
     }
 
+
 //    @GetMapping("/api/rezept")
 //    public ResponseEntity<Void> test() {
 //        rezeptService.fetch();

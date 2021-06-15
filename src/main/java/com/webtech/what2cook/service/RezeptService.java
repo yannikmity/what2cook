@@ -4,8 +4,6 @@ import com.webtech.what2cook.persistence.Nutzer;
 import com.webtech.what2cook.persistence.NutzerRepository;
 import com.webtech.what2cook.persistence.Rezept;
 import com.webtech.what2cook.persistence.RezeptRepository;
-//import com.webtech.what2cook.web.Meal;
-//import com.webtech.what2cook.web.MealResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -18,11 +16,38 @@ import java.util.Optional;
 public class RezeptService {
 
     private final RezeptRepository rezeptRepository;
+//    private final RestTemplate restTemplate;
 
-    //@Autowired
+//    @Autowired
     public RezeptService(RezeptRepository rezeptRepository) {
         this.rezeptRepository = rezeptRepository;
     }
+//    public RezeptService(RestTemplate restTemplate) {
+//        this.restTemplate = restTemplate;
+//    }
+//    private static final String API_URL = "https://www.themealdb.com/api/json/v1/1/random.php";
+//
+//
+//
+//        public void fetch(){
+//
+//        ResponseEntity<MealResponse> entity = restTemplate.getForEntity(API_URL, MealResponse.class);
+//
+//        MealResponse mealResponse = entity.getBody();
+//
+//        System.out.println(mealResponse.getMeals().get(0).getIdMeal());
+//        System.out.println(mealResponse.getMeals().get(0).getStrMeal());
+//        System.out.println(mealResponse.getMeals().get(0).getStrDrinkAlternate());
+//        System.out.println(mealResponse.getMeals().get(0).getStrCategory());
+//        System.out.println(mealResponse.getMeals().get(0).getStrArea());
+//        System.out.println(mealResponse.getMeals().get(0).getStrInstructions());
+//        System.out.println(mealResponse.getMeals().get(0).getStrMealThumb());
+//        System.out.println(mealResponse.getMeals().get(0).getStrTags());
+//        System.out.println(mealResponse.getMeals().get(0).getStrYoutube());
+//        System.out.println(mealResponse.getMeals().get(0).getStrIngredient1());
+//        System.out.println(mealResponse.getMeals().get(0).getStrIngredient2());
+//
+//        }
 
     public List<Rezept> getAllRezepte() {
 
@@ -36,12 +61,5 @@ public class RezeptService {
             throw new IllegalStateException("Rezept already exists");
         }
     }
-
-
-    //RequestBody für Rezept
-
-
-
-
 
 }
