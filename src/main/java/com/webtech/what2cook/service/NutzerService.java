@@ -35,7 +35,6 @@ public class NutzerService {
         nutzerRepository.save(nutzer);
     }
 
-
     public void deleteNutzer(Long nutzerId){
         boolean exists = nutzerRepository.existsById(nutzerId);
         if(!exists){

@@ -6,13 +6,5 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class What2cookApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
-
-//    @Test
-//    void redTest(){
-//        throw runtimeException();
-//    }
 
 }
