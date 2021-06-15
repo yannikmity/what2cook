@@ -80,7 +80,6 @@ class Meal {
     private String strIngredient13;
     private String strIngredient14;
     private String strIngredient15;
-    private String StrIngredient16;
     private String strIngredient16;
     private String strIngredient17;
     private String strIngredient18;
@@ -301,11 +300,11 @@ class Meal {
     }
 
     public String getStrIngredient16() {
-        return StrIngredient16;
+        return strIngredient16;
     }
 
     public void setStrIngredient16(String strIngredient16) {
-        StrIngredient16 = strIngredient16;
+        strIngredient16 = strIngredient16;
     }
 
     public String getStrIngredient17() {
