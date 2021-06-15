@@ -13,9 +13,8 @@ import javax.ws.rs.Path;
 import java.util.List;
 import static com.webtech.what2cook.config.ApplicationUserRole.NUTZER;
 
-//@RestController
+@RestController
 @Controller
-//@RequestMapping(path = "nutzer")
 public class NutzerController {
 
     private final NutzerService nutzerService;
@@ -26,11 +25,12 @@ public class NutzerController {
     }
 
     @GetMapping(Endpoints.REGISTER)
-    public ModelAndView showForm(Model model){
+    public ModelAndView showForm(Model model) {
         Nutzer nutzer = new Nutzer();
         model.addAttribute("nutzer", nutzer);
         return new ModelAndView(ViewNames.REGISTER);
     }
+
     @PostMapping(Endpoints.REGISTER)
     public ModelAndView submitForm(@ModelAttribute("nutzer") Nutzer nutzer) {
         try {
@@ -42,36 +42,32 @@ public class NutzerController {
     }
 
     @GetMapping(Endpoints.REGISTERROR)
-    public ModelAndView showFormError(Nutzer nutzer){
+    public ModelAndView showFormError(Nutzer nutzer) {
         return new ModelAndView(ViewNames.REGISTERROR);
     }
 
 
-    @GetMapping(Endpoints.MEINEREZEPTE)
-    public ModelAndView getAllRezepte(){
-        return new ModelAndView(ViewNames.MEINEREZEPTE);
-    }
-
-
-    //@RequestMapping("api/v1/students")
     @GetMapping(path = "/api/getUser")
     public List<Nutzer> getUser() {
         return nutzerService.getUser();
     }
+
+
+    @DeleteMapping("{nutzerId}")
+    public void deleteNutzer(@PathVariable("nutzerId") Long nutzerId) {
+        nutzerService.deleteNutzer(nutzerId);
+
+    }
+
 //    public Nutzer getMyProfile(@PathVariable("id") Integer id) {
 //        return NUTZER.stream()
 //                .filter(nutzer -> id.equals(nutzer.getId()))
 //                .findFirst()
 //                .orElseThro(() -> new IllegalStateException(
 //                        "Nutzer" + id + " does not exists"
-//                ))
+//                ));
 //    }
-
-//    @DeleteMapping("{nutzerId}")
-//    public void deleteNutzer(@PathVariable("nutzerId") Long nutzerId) {
-//        nutzerService.deleteNutzer(nutzerId);
-
-    }
+}
 
 //    @Autowired
 //    Environment environment;

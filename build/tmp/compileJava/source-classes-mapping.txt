@@ -1,7 +1,7 @@
 com/webtech/what2cook/config/PasswortConfig.java
  com.webtech.what2cook.config.PasswortConfig
-com/webtech/what2cook/web/MainController.java
- com.webtech.what2cook.web.MainController
+com/webtech/what2cook/config/ApplicationUserRole.java
+ com.webtech.what2cook.config.ApplicationUserRole
 com/webtech/what2cook/config/ApplicationSecurityConfig.java
  com.webtech.what2cook.config.ApplicationSecurityConfig
 com/webtech/what2cook/persistence/NutzerRepository.java
@@ -10,41 +10,37 @@ com/webtech/what2cook/config/BeanConfig.java
  com.webtech.what2cook.config.BeanConfig
 com/webtech/what2cook/config/ViewNames.java
  com.webtech.what2cook.config.ViewNames
-com/webtech/what2cook/persistence/Meals.java
- com.webtech.what2cook.persistence.Meals
-com/webtech/what2cook/service/RezeptService.java
- com.webtech.what2cook.service.RezeptService
-com/webtech/what2cook/web/NutzerManagementController.java
- com.webtech.what2cook.web.NutzerManagementController
-com/webtech/what2cook/web/RezeptService.java
- com.webtech.what2cook.web.Meal
- com.webtech.what2cook.web.MealResponse
- com.webtech.what2cook.web.RezeptService
-com/webtech/what2cook/config/WebMvcConfig.java
- com.webtech.what2cook.config.WebMvcConfig
-com/webtech/what2cook/web/NutzerController.java
- com.webtech.what2cook.web.NutzerController
-com/webtech/what2cook/web/RezeptControllerNeu.java
- com.webtech.what2cook.web.RezeptControllerNeu
-com/webtech/what2cook/persistence/Nutzer.java
- com.webtech.what2cook.persistence.Nutzer
-com/webtech/what2cook/web/RezeptController.java
- com.webtech.what2cook.web.RezeptController
-com/webtech/what2cook/persistence/Rezept.java
- com.webtech.what2cook.persistence.Rezept
-com/webtech/what2cook/persistence/RezeptConfig.java
- com.webtech.what2cook.persistence.RezeptConfig
-com/webtech/what2cook/config/Endpoints.java
- com.webtech.what2cook.config.Endpoints
-com/webtech/what2cook/persistence/RezeptRepository.java
- com.webtech.what2cook.persistence.RezeptRepository
-com/webtech/what2cook/config/ApplicationUserPermission.java
- com.webtech.what2cook.config.ApplicationUserPermission
 com/webtech/what2cook/persistence/NutzerConfig.java
  com.webtech.what2cook.persistence.NutzerConfig
-com/webtech/what2cook/service/NutzerService.java
- com.webtech.what2cook.service.NutzerService
-com/webtech/what2cook/config/ApplicationUserRole.java
- com.webtech.what2cook.config.ApplicationUserRole
+com/webtech/what2cook/web/NutzerManagementController.java
+ com.webtech.what2cook.web.NutzerManagementController
+com/webtech/what2cook/config/WebMvcConfig.java
+ com.webtech.what2cook.config.WebMvcConfig
+com/webtech/what2cook/persistence/RezeptRepository.java
+ com.webtech.what2cook.persistence.RezeptRepository
+com/webtech/what2cook/persistence/Nutzer.java
+ com.webtech.what2cook.persistence.Nutzer
 com/webtech/what2cook/What2cookApplication.java
  com.webtech.what2cook.What2cookApplication
+com/webtech/what2cook/persistence/MealResponse.java
+ com.webtech.what2cook.persistence.MealResponse
+com/webtech/what2cook/persistence/Rezept.java
+ com.webtech.what2cook.persistence.Rezept
+com/webtech/what2cook/config/ApplicationUserPermission.java
+ com.webtech.what2cook.config.ApplicationUserPermission
+com/webtech/what2cook/config/Endpoints.java
+ com.webtech.what2cook.config.Endpoints
+com/webtech/what2cook/web/RezeptController.java
+ com.webtech.what2cook.web.RezeptController
+com/webtech/what2cook/web/MainController.java
+ com.webtech.what2cook.web.MainController
+com/webtech/what2cook/persistence/RezeptConfig.java
+ com.webtech.what2cook.persistence.RezeptConfig
+com/webtech/what2cook/service/RezeptService.java
+ com.webtech.what2cook.service.RezeptService
+com/webtech/what2cook/service/NutzerService.java
+ com.webtech.what2cook.service.NutzerService
+com/webtech/what2cook/persistence/Meal.java
+ com.webtech.what2cook.persistence.Meal
+com/webtech/what2cook/web/NutzerController.java
+ com.webtech.what2cook.web.NutzerController
