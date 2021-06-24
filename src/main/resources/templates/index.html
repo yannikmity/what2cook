@@ -1,68 +1,80 @@
-<!doctype html>
-<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.83.1">
-    <title>Headers · Bootstrap v5.0</title>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  </head>
+<head>
+    <title>what2cook</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css"/>
+<!--    <link href="../static/css/style.css" rel="stylesheet" type="text/css">-->
+    <script src="https://unpkg.com/vue@3.0.5"></script>
+    <script th:src="@{https://unpkg.com/vue@next}" defer></script>
+</head>
+
 <body>
-  <main>
-    <div class="container">
-      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-          <img src="https://cdn.onlinewebfonts.com/svg/img_174839.png" alt="what2cook" style="width:50px;height:60px;">
-          <span class="fs-4">what2cook</span>
-        </a>
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
-        </ul>
-
-        <div class="col-md-3 text-end">
-          <button th:action="@{login.html}" type="button" class="btn btn-outline-primary me-2">Login</button>
-          <button action="#" th:action="@{register.html}" th:method="post" type="button" class="btn btn-primary">Sign-up</button>
+<div id="wrapper">
+    <header>
+        <div class="flex">
+            <div class="logo"><a href="#">what2cook<span>randome recipes</span></a></div>
+            <nav>
+                <button id="nav-toggle" class="hamburger-menu">
+                    <span class="strip"></span>
+                    <span class="strip"></span>
+                    <span class="strip"></span>
+                </button>
+                <ul id="nav-menu-container" style="display: none;">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
         </div>
-      </header>
-    </div>
-      <div id="app" align="center">
-        <img v-bind:src="strMealThumb" alt="Gericht" width="300" height="250" style="vertical-align:middle;margin:0px 50px" class="col-md-3 text-end"/>
-        <h1>Gericht: {{strMeal}}</h1>
-        <h3>Kategorie: {{strCategory}}</h3>
-        <h3>Küche: {{strArea}}</h3>
-      <ul th:align="center">
-        <h5>Zutaten & Menge</h5>
-        <li>{{strIngredient1}},  {{strMeasure1}}</li>
-        <li>{{strIngredient2}},  {{strMeasure2}}</li>
-        <li>{{strIngredient3}},  {{strMeasure3}}</li>
-        <li>{{strIngredient4}},  {{strMeasure4}}</li>
-        <li>{{strIngredient5}},  {{strMeasure5}}</li>
-        <li>{{strIngredient6}},  {{strMeasure6}}</li>
-        <li>{{strIngredient7}},  {{strMeasure7}}</li>
-        <li>{{strIngredient8}},  {{strMeasure8}}</li>
-        <li>{{strIngredient9}},  {{strMeasure9}}</li>
-        <li>{{strIngredient10}},  {{strMeasure10}}</li>
-        <li>{{strIngredient11}},  {{strMeasure11}}</li>
-        <li>{{strIngredient12}},  {{strMeasure12}}</li>
-        <li>{{strIngredient13}},  {{strMeasure13}}</li>
-        <li>{{strIngredient14}},  {{strMeasure14}}</li>
-        <li>{{strIngredient15}},  {{strMeasure15}}</li>
-        <li>{{strIngredient16}},  {{strMeasure16}}</li>
-        <li>{{strIngredient17}},  {{strMeasure17}}</li>
-        <li>{{strIngredient18}},  {{strMeasure18}}</li>
-        <li>{{strIngredient19}},  {{strMeasure19}}</li>
-        <li>{{strIngredient20}},  {{strMeasure20}}</li>
-      </ul>
-      <button  v-on:click="getRezept()"> Random Rezept </button>
-      <script src="https://unpkg.com/vue@3.0.5"></script>
-      <script th:src="@{/js/app.js}"></script>
-    </div>
-  </main>
+    </header>
+
+    <main>
+        <section class="food-image">
+            <img src="https://www.themealdb.com/images/media/meals/wxuvuv1511299147.jpg">
+            <div class="food-marketing-bar">
+                <h3>Du weißt nicht was du kochen sollst?</h3>
+                <h1>hol dir ein zufälliges Rezept</h1>
+            </div>
+        </section>
+
+        <section class="random-recipe">
+            <div id="flex">
+                <div class="box">
+                    <img v-bind:src="strMealThumb"/>
+                    <h1>Gericht: {{strMeal}}</h1>
+                    <h3>Kategorie: {{strCategory}}</h3>
+                    <h3>Küche: {{strArea}}</h3>
+                    <h5>Zutaten & Menge</h5>
+                    <ul>
+                        <li v-for="zutat in zutatenListe">{{zutat.ingredient}} - {{zutat.measure}}</li>
+                    </ul>
+                    <h5>Zubereitung: </h5>
+                    <p>{{strInstructions}}</p>
+                    <button v-on:click="getRecipe">Random Rezept</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="flex">
+            <small>&copy; 2021 Projekt im Modul Webtechnologien an der HTW Berlin</small>
+            <ul>
+                <li>
+                    <a href="https://github.com/yannikmity/what2cook">
+                        <img src="GitHub-Mark-32px.png" alt="GitHub"/>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </footer>
+</div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script th:src="@{/js/app.js}" type="text/javascript"></script>
+</html>
