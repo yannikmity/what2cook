@@ -1,4 +1,8 @@
 /* global style rules */
+#wrapper {
+    font-family: 'helvetica', 'sans-serif';
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -61,12 +65,12 @@ header .flex {
 }
 
 .logo span {
-    color: black;
+    color: #7dcac3;
 }
 
 .hamburger-menu {
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid #ffffff;
     padding: 3px 5px;
     width: 30px;
     cursor: pointer;
@@ -76,7 +80,7 @@ header .flex {
 .hamburger-menu .strip {
     display: block;
     height: 1px;
-    background-color: white;
+    background-color: #ffffff;
     margin: 4px 0;
 }
 
@@ -108,7 +112,7 @@ nav ul li a {
 
 .food-image img {
     width: 100%;
-    align-items: center;
+
 }
 
 .food-marketing-bar {
@@ -382,8 +386,11 @@ footer ul li {
         padding: 15px 0 5px;
         border-top: 1px solid white;
     }
+    nav ul li a {
+        font-size: 1.5em;
+    }
     .hamburger-menu{
-        display: none;
+        display: block;
     }
     .food-marketing-bar {
         padding: 15px 0;
@@ -399,5 +406,8 @@ footer ul li {
     }
     h3{
         font-size: 0.75em;
+    }
+    .food-marketing-bar {
+        position: static;
     }
 }
