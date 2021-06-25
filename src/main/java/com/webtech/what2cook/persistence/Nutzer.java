@@ -1,8 +1,6 @@
 package com.webtech.what2cook.persistence;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.time.Period;
 
 import static javax.persistence.GenerationType.SEQUENCE;
 
@@ -48,24 +46,33 @@ public class Nutzer {
 
     )
     private String email;
+    @Column(
+            name ="owner",
+            nullable = false,
+            columnDefinition = "TEXT"
+
+    )
+    private String owner;
 
 
     public Nutzer(){
     }
 
-    public Nutzer(Long id, String firstName, String lastName, String email){
+    public Nutzer(Long id, String firstName, String lastName, String email, String owner){
         this.id=id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
 
+        this.owner = owner;
     }
 
-    public Nutzer(String firstName, String lastName, String email){
+    public Nutzer(String firstName, String lastName, String email, String owner){
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
 
+        this.owner = owner;
     }
 
 
@@ -99,5 +106,13 @@ public class Nutzer {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 }

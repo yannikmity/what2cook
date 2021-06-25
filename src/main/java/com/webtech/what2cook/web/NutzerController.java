@@ -5,6 +5,8 @@ import com.webtech.what2cook.config.ViewNames;
 import com.webtech.what2cook.persistence.Nutzer;
 import com.webtech.what2cook.service.NutzerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -25,16 +27,18 @@ public class NutzerController {
     }
 
     @GetMapping(Endpoints.REGISTER)
-    public ModelAndView showForm(Model model) {
+    public ModelAndView showForm(@AuthenticationPrincipal OidcUser user, Model model) {
         Nutzer nutzer = new Nutzer();
         model.addAttribute("nutzer", nutzer);
         return new ModelAndView(ViewNames.REGISTER);
     }
 
     @PostMapping(Endpoints.REGISTER)
-    public ModelAndView submitForm(@ModelAttribute("nutzer") Nutzer nutzer) {
+    public ModelAndView submitForm(@AuthenticationPrincipal OidcUser user, @ModelAttribute Nutzer nutzer, Model model) {
         try {
+            nutzer.setOwner(user.getEmail());
             nutzerService.addNewNutzer(nutzer);
+            model.addAttribute("nutzer", nutzer);
         } catch (IllegalStateException e) {
             return new ModelAndView(ViewNames.REGISTERROR);
         }
@@ -47,10 +51,10 @@ public class NutzerController {
     }
 
 
-    @GetMapping(path = "/api/getUser")
-    public List<Nutzer> getUser() {
-        return nutzerService.getUser();
-    }
+//    @GetMapping(path = "/api/getUser")
+//    public List<Nutzer> getUser() {
+//        return nutzerService.getUser();
+//    }
 
 
     @DeleteMapping("{nutzerId}")

@@ -8,22 +8,36 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class NutzerService {
 
+    @Autowired
     private final NutzerRepository nutzerRepository;
 
-    @Autowired
+
     public NutzerService(NutzerRepository nutzerRepository) {
         this.nutzerRepository = nutzerRepository;
     }
 
-    public List<Nutzer> getUser (){
-        return nutzerRepository.findAll();
+    public List<Nutzer> findAll(String userEmail) {
+
+        var iterator = nutzerRepository.findAll();
+
+        var nutzers = new ArrayList<Nutzer>();
+        for (Nutzer n : iterator) {
+            if(n.getOwner()!=null && n.getOwner().equals(userEmail)) nutzers.add(n);
+        }
+
+        return nutzers;
     }
+
+//    public List<Nutzer> getUser (){
+//        return nutzerRepository.findAll();
+//    }
 
     public void addNewNutzer(Nutzer nutzer) {
 
