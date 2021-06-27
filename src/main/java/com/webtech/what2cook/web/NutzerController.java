@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import javax.ws.rs.Path;
 import java.util.List;
-import static com.webtech.what2cook.config.ApplicationUserRole.NUTZER;
+//import static com.webtech.what2cook.config.ApplicationUserRole.NUTZER;
 
 @RestController
 @Controller
