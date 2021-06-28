@@ -65,10 +65,10 @@ public class NutzerController {
 
 
     //Nur als test hinzugefügt, da man bei der securityconfig mindestens ein pfad braucht, wo man auch ungeloggt rein darf.
-    @GetMapping(Endpoints.MEINEREZEPTE)
-    public ModelAndView showFood(@AuthenticationPrincipal OidcUser user, Model model) {;
-        return new ModelAndView(ViewNames.MEINEREZEPTE);
-    }
+//    @GetMapping(Endpoints.MEINEREZEPTE)
+//    public ModelAndView showFood(@AuthenticationPrincipal OidcUser user, Model model) {;
+//        return new ModelAndView(ViewNames.MEINEREZEPTE);
+//    }
 
 //    public Nutzer getMyProfile(@PathVariable("id") Integer id) {
 //        return NUTZER.stream()
