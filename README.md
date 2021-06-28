@@ -9,6 +9,9 @@ Milestone 1
 API Link: https://www.themealdb.com/api.php
 https://www.themealdb.com/api/json/v1/1/random.php
 
+#Heroku 
+https://what2cook-yangoe.herokuapp.com/
+
 Thema:
 Eine Web-Applikation welche zufällige Rezepte über eine API aus der Datenbank liefert.
 Die Bewertung des Rezeptes soll in einer eigenen Datenbank gespeichert werden.
