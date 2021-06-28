@@ -1,4 +1,4 @@
-com/webtech/what2cook/What2cookApplicationTests.java
- com.webtech.what2cook.What2cookApplicationTests
 com/webtech/what2cook/service/NutzerServiceTest.java
  com.webtech.what2cook.service.NutzerServiceTest
+com/webtech/what2cook/What2cookApplicationTests.java
+ com.webtech.what2cook.What2cookApplicationTests
